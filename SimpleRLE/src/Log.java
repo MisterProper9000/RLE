@@ -2,7 +2,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /**
- * Created by Даниил on 27.09.2018.
+ * Created by Г„Г Г­ГЁГЁГ« on 27.09.2018.
  */
 public class Log {
 
