@@ -1,0 +1,3 @@
+WORKER: worker1.cfg
+WORKER :worker2.cfg
+WORKER: worker3.cfg
