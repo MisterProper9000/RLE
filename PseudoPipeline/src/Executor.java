@@ -2,7 +2,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 
 /**
- * Created by Даниил on 17.11.2018.
+ * Created by Г„Г Г­ГЁГЁГ« on 17.11.2018.
  */
 
 interface Executor {
