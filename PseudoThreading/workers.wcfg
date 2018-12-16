@@ -1,0 +1,4 @@
+FIRST_WORKER:W1: worker1.txt:Worker
+WORKER:W2 :worker2.txt:Worker
+WORKER:W3:worker3.txt:Worker
+LAST_WORKER:W4: worker4.cfg:RLEWorkItem
