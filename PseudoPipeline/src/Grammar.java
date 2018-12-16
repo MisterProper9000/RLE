@@ -1,5 +1,5 @@
 /**
- * Created by Даниил on 23.11.2018.
+ * Created by Г„Г Г­ГЁГЁГ« on 23.11.2018.
  */
 public class Grammar {
     public enum FILE_LEXEMES {INPUT_FILE, OUTPUT_FILE, PIPSEQ, WORKERS_FILE, CHUNK_SIZE}
