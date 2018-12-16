@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Даниил on 29.09.2018.
+ * Created by Г„Г Г­ГЁГЁГ« on 29.09.2018.
  */
 public class Interpretator {
     private static final String sp = ":";
