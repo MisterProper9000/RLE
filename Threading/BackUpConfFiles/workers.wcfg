@@ -1,0 +1,6 @@
+FIRST_WORKER:W1: worker1.cfg:InputReader
+WORKER:W2 :worker2.cfg:RLEWorkItem
+WORKER:W3:worker3.txt:XORer
+WORKER:W4:worker4.cfg:RLEWorkItem
+WORKER:W5:worker5.txt:XORer
+LAST_WORKER:W6: worker6.cfg:OutputWriter

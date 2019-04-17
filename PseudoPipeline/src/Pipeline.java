@@ -28,7 +28,7 @@ public class Pipeline {
     }
 
     //signs of input and output in workers file
-    public static final String input = "-1", output = "-2";
+    public static final String input = "0", output = "2";
 
     //Workers config file grammar
     public static final Map<String, Grammar.WORKER_CFG_FILE_LEXEMES> workerGrammarMap;
@@ -36,8 +36,8 @@ public class Pipeline {
     static {
         workerGrammarMap = new HashMap<>();
         workerGrammarMap.put("WORKER", Grammar.WORKER_CFG_FILE_LEXEMES.WORKER);
-        workerGrammarMap.put(output, Grammar.WORKER_CFG_FILE_LEXEMES.INPUT);
-        workerGrammarMap.put(input, Grammar.WORKER_CFG_FILE_LEXEMES.OUTPUT);
+        workerGrammarMap.put(output, Grammar.WORKER_CFG_FILE_LEXEMES.OUTPUT);
+        workerGrammarMap.put(input, Grammar.WORKER_CFG_FILE_LEXEMES.INPUT);
     }
 
     //Worker's name and corresponding worker
@@ -126,8 +126,8 @@ public class Pipeline {
                         System.exit(1);
                     }
                     check++;
-                    startIdx = Integer.toString(seq.get(i).getValue());
-                    workersList.get(Integer.toString(seq.get(i).getValue())).setInput(new DataInputStream(new FileInputStream(configMap.get(Grammar.FILE_LEXEMES.INPUT_FILE))));
+                    startIdx = Integer.toString(seq.get(i).getKey());
+                    workersList.get(Integer.toString(seq.get(i).getKey())).setInput(new DataInputStream(new FileInputStream(configMap.get(Grammar.FILE_LEXEMES.INPUT_FILE))));
                 } catch (IOException e) {
                     Log.report("Can't open input file");
                     System.exit(1);
@@ -142,7 +142,7 @@ public class Pipeline {
                         System.exit(1);
                     }
                     check++;
-                    workersList.get(Integer.toString(seq.get(i).getKey())).setOutput(new DataOutputStream(new FileOutputStream(configMap.get(Grammar.FILE_LEXEMES.OUTPUT_FILE))));
+                    workersList.get(Integer.toString(seq.get(i).getValue())).setOutput(new DataOutputStream(new FileOutputStream(configMap.get(Grammar.FILE_LEXEMES.OUTPUT_FILE))));
                 } catch (IOException e) {
                     Log.report("Can't open output file");
                     System.exit(1);
@@ -156,16 +156,16 @@ public class Pipeline {
                     Log.report("Wrong worker name " + seq.get(i).getKey());
                     System.exit(1);
                 }
-                workersList.get(Integer.toString(seq.get(i).getKey())).setConsumer(workersList.get(Integer.toString(seq.get(i).getValue())));
 
             }
+            workersList.get(Integer.toString(seq.get(i).getKey())).setConsumer(workersList.get(Integer.toString(seq.get(i).getValue())));
         }
 
         if (check != 2) {
             Log.report("Missing input or output in pipeline's queue");
             System.exit(1);
         }
-
+/*
         //check for cycle
         Boolean workers[] = new Boolean[seq.size() - 1];
         for(int i = 0; i < seq.size() -1; i++)
@@ -198,6 +198,7 @@ public class Pipeline {
                 Log.report("Found a pair of workers which is doesn't belongs to pipeline queue");
                 break;
             }
+            */
         return true;
     }
 

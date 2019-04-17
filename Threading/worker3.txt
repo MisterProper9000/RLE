@@ -1,0 +1,4 @@
+keyword: lovemaths
+buf_size: 6
+zero_offset: 12
+first_zero_offset: 12

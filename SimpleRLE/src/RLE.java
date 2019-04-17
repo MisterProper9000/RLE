@@ -10,7 +10,7 @@ import java.io.FileOutputStream;
 import java.io.BufferedOutputStream;
 
 /**
- * Created by пїЅпїЅпїЅпїЅпїЅпїЅ on 15.09.2018.
+ * Created by Даниил on 15.09.2018.
  */
 
 public class RLE {

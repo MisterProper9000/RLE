@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Г„Г Г­ГЁГЁГ« on 29.09.2018.
+ * Created by Даниил on 29.09.2018.
  */
 public class Interpretator {
     private static final String sp = ":";
@@ -80,12 +80,12 @@ public class Interpretator {
             else if(grammarMap.get(pair[0]) == LEXEMES.OUTPUT_FILE)
                 RLE.resultMap.put(grammarMap.get(pair[0]), pair[1]);
             else
-                if((l = grammarMap.get(pair[0])) != null)
-                    RLE.resultMap.put(l, pair[1]);
-                else {
-                    Log.report("Invalid lexem");
-                    return false;
-                }
+            if((l = grammarMap.get(pair[0])) != null)
+                RLE.resultMap.put(l, pair[1]);
+            else {
+                Log.report("Invalid lexem");
+                return false;
+            }
 
         }
 

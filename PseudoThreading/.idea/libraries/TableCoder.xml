@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="TableCoder">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/TableCoder.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
